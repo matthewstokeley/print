@@ -1,5 +1,3 @@
-semantic
-
 create html lists, forms and tables from json.
 
 @todo form
