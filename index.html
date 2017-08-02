@@ -33,10 +33,60 @@
     <body id="body">
 
         <!-- scripts -->
-        <script src="index.js"></script>
+        <script src="vendor/elements.js"></script>
+        <script src="src/print.js"></script>
+        <script src="src/List.js"></script>
         <script>
 
-
+            var listSchema = {
+                rootId: 'libraries',
+                classList: ['libraries'],
+                role: 'menu',
+                items: [
+                    {
+                        name: 'frames',
+                        link: {
+                            name: 'frames-link',
+                            value: 'Frames',
+                            href: "#"
+                        }
+                    },
+                    {
+                        name: 'segues',
+                        link: {
+                            name: 'segues-link',
+                            value: "Segues",
+                            href: "#"
+                        }
+                    },
+                    {
+                        name: 'text',
+                        link: {
+                            name: 'text-link',
+                            value: 'Text',
+                            href: "#"
+                        }
+                    },
+                    {
+                        name: 'events',
+                        link: {
+                            name: 'events-link',
+                            value: 'Events',
+                            href: "#"
+                        }
+                    },
+                    {
+                    name: 'objects',
+                        link: {
+                            name: 'objects-link',
+                            value: 'Objects',
+                            href: "#"
+                        }
+                    }
+                ]
+            };
+            var list = new print.List(listSchema);
+            list.appendToNode(document.getElementById('body'));
         </script>
     </body>
 

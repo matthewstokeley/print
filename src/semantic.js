@@ -1,1 +1,1 @@
-var semantic = {};
+var print = {};

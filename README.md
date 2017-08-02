@@ -1,10 +1,12 @@
 semantic
 
-create semantic lists, forms and tables from json.
+create html lists, forms and tables from json.
 
 @todo form
 @todo table
 @todo modifier property
+@todo keys
+@todo rename to print 
 
 'npm install && grunt build'
 
@@ -44,7 +46,7 @@ var list = {
     }]
 };
 
-var list = new semantic.List(list);
+var list = new print.List(list);
 
 console.log(list.getString());
 list.appendToNode(document.getElementById('body'));

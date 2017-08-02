@@ -1,4 +1,4 @@
-(function(semantic) {
+(function(print) {
 
 	/**
 	 * [List description]
@@ -201,6 +201,6 @@
 		return this;
 	};
 
-	semantic.List = List;
+	print.List = List;
 
-})(semantic);
+})(print);

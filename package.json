@@ -1,7 +1,7 @@
 {
-  "name": "semantic",
+  "name": "print",
   "version": "0.0.1",
-  "description": "generate semantics documents",
+  "description": "generate html documents",
   "main": "Gruntfile.js",
   "dependencies": {
     "grunt": "^0.4.5",

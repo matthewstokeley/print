@@ -22,6 +22,10 @@ var $ = {};
 			element.id = properties.id;
 		}
 
+		if (properties.role) {
+			element.role = properties.role;
+		}
+
 		if (properties.title) {
 			element.title = properties.title;
 		}
