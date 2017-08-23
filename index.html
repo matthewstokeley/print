@@ -27,10 +27,38 @@
 
         <!-- styles -->
         <!-- <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,700' rel='stylesheet' type='text/css'></link> -->
+
+        <style>
+            .title {
+                padding: 3rem;
+                background: #fff;
+                position: fixed;
+                top: 30vh;
+                left: 60vw;
+            }
+
+            .description {
+                display: block;
+                font-size: 10px;
+            }
+
+            .title, .list {
+                font-size: 3rem;
+            }
+        </style>
         
     </head>
 
     <body id="body">
+
+
+        <title class="title">
+            Print
+            <span class="description">create html from json objects</span>
+        </title>
+
+        <list id="list">
+        </list>
 
         <!-- scripts -->
         <script src="vendor/elements.js"></script>
@@ -87,8 +115,8 @@
             };
 
             var list = new print.List(listOptions);
-            var listString = list.getString();
-            document.getElementById('body').innerText = list.getString();
+
+            document.getElementById('list').innerText = list.getString();
 
             
         </script>
