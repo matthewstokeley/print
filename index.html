@@ -35,7 +35,7 @@
         <!-- scripts -->
         <script src="vendor/elements.js"></script>
         <script src="src/print.js"></script>
-        <script src="src/List.js"></script>
+        <script src="src/list.js"></script>
         <script>
 
             var listSchema = {
@@ -85,7 +85,7 @@
                     }
                 ]
             };
-            
+
             var list = new print.List(listSchema);
             document.getElementById('body').innerHTML = list.getString();
 
