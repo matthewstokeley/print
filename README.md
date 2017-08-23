@@ -31,7 +31,7 @@ var list = {
             // optional
             href: '#',
             id: 'item-2',
-            classList: 'item-2--item__home',
+            classList: ['item-2__item--home'],
             data: {
                 homeKey: 0
             }
@@ -39,8 +39,8 @@ var list = {
         // optional
         id: 'item-1',
         title: 'item-1',
-        classList: ['item-1--link__home'],
-        data: {homeKey:0}
+        classList: ['item__link--home'],
+        data: { homeKey: 0}
     }, {
         name: 'item-2',
         value: 'item-2',
