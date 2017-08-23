@@ -85,9 +85,13 @@
                     }
                 ]
             };
+            
             var list = new print.List(listSchema);
-            list.appendToNode(document.getElementById('body'));
+            document.getElementById('body').innerHTML = list.getString();
+
+            
         </script>
     </body>
+    
 
 </html>

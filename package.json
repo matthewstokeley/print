@@ -1,7 +1,7 @@
 {
   "name": "print",
   "version": "0.0.1",
-  "description": "generate html documents",
+  "description": "generate html markup from json objects",
   "main": "Gruntfile.js",
   "dependencies": {
     "grunt": "^0.4.5",
