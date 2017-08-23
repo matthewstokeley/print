@@ -1,12 +1,19 @@
+# Print
 create html lists, forms and tables from json.
+
+### todos
 
 @todo form
 @todo table
 @todo modifier property
 @todo keys
-@todo rename to print 
+
+### Installation
 
 'npm install && grunt build'
+
+
+### Instantiation and options
 
 ```
 var list = {
@@ -46,7 +53,10 @@ var list = {
 
 var list = new print.List(list);
 
+// returns an html string
 console.log(list.getString());
+
+// appends the element to a dom element
 list.appendToNode(document.getElementById('body'));
 
 ```

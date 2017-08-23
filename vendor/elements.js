@@ -1,5 +1,6 @@
 var $ = {};
-	var createElement = function(options) {
+
+var createElement = function(options) {
 
 
 		var properties = options.properties;

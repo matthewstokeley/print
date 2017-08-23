@@ -9,7 +9,7 @@ module.exports = function(grunt) {
             dist: {
                 src: [
                     'vendor/elements.js',
-                    'src/semantics.js',
+                    'src/print.js',
                     'src/List.js',
                     'src/Form.js',
                     'src/Table.js'
