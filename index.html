@@ -38,7 +38,7 @@
         <script src="src/list.js"></script>
         <script>
 
-            var listSchema = {
+            var listOptions = {
                 rootId: 'libraries',
                 classList: ['libraries'],
                 role: 'menu',
@@ -86,7 +86,8 @@
                 ]
             };
 
-            var list = new print.List(listSchema);
+            var list = new print.List(listOptions);
+            var listString = list.getString();
             document.getElementById('body').innerText = list.getString();
 
             

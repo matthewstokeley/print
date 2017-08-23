@@ -17,7 +17,7 @@
 	/**
 	 * [init description]
 	 * @param  {Object} options 
-	 * @return {Object} returns the class context
+	 * @chainable
 	 */
 	List.prototype.init = function(options) {
 		return this.setItems(options.items)
@@ -58,8 +58,8 @@
 		return {
 			name: item.name,
 			id: (item.id) ? item.id : item.name,
-			classList: item.classList ? [this.rootId + '--link'].concat(item.classList) : [this.rootId + '--item'],
-			dataset: item.data ? item.data : {}
+			classList: (item.classList) ? [this.rootId + '__item'].concat(item.classList) : [this.rootId + '__item'],
+			dataset: (item.data) ? item.data : {}
 		};
 	};
 
@@ -72,11 +72,11 @@
 		return {
 			name: link.name,
 			text: link.value,
-			href: link.href ? link.href : 'javascript:;',
-			id: link.id ? link.id : link.name,
-			title: link.title ? link.title : link.name,
-			classList: link.classList ? [this.rootId + '--link'].concat(link.classList) : [this.rootId + '--link'],
-			dataset: link.data ? link.data : {}
+			href: (link.href) ? link.href : 'javascript:;',
+			id: (link.id) ? link.id : link.name,
+			title: (link.title) ? link.title : link.name,
+			classList: (link.classList) ? [this.rootId + '__link'].concat(link.classList) : [this.rootId + '__link'],
+			dataset: (link.data) ? link.data : {}
 		}
 	};
 
@@ -144,7 +144,7 @@
 	 * [createDocument description]
 	 * @return {Node}
 	 */
-	List.prototype.createDocument = function() {
+	List.prototype.createHtml = function() {
 		return $.createListFragment(this.listNode, this.itemNodes, this.linkNodes);
 	};
 
@@ -152,8 +152,8 @@
 	 * [setDocument description]
 	 * @chainable
 	 */
-	List.prototype.setDocument = function() {
-		this.document = this.createDocument();
+	List.prototype.setHtml = function() {
+		this.html = this.createHtml();
 		return this;
 	};
 
@@ -161,8 +161,8 @@
 	 * [getDocument description]
 	 * @return {Node}
 	 */
-	List.prototype.getDocument = function() {
-		return this.document;
+	List.prototype.getHtml = function() {
+		return this.html;
 	};
 
 	/**
@@ -170,7 +170,7 @@
 	 * @return {String}
 	 */
 	List.prototype.createString = function() {
-		return this.document.outerHTML;
+		return this.html.outerHTML;
 	};
 
 	/**
@@ -197,7 +197,7 @@
 	 * @return {Object}
 	 */
 	List.prototype.appendToNode = function(node) {
-		node.appendChild(this.document);
+		node.appendChild(this.html);
 		return this;
 	};
 

@@ -10,9 +10,9 @@ module.exports = function(grunt) {
                 src: [
                     'vendor/elements.js',
                     'src/print.js',
-                    'src/List.js',
-                    'src/Form.js',
-                    'src/Table.js'
+                    'src/list.js',
+                    'src/form.js',
+                    'src/table.js'
                 ],
                 dest: 'dist/scripts/<%= pkg.name %>.js'
             }
