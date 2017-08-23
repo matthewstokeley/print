@@ -25,7 +25,7 @@
 			.setItemNodes()
 			.setLinkNodes()
 			.setListNode()
-			.setDocument()
+			.setHtml()
 			.setString();
 	};
 
